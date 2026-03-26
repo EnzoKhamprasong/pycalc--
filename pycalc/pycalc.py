@@ -11,8 +11,19 @@ def add(a, b):
   return res
 
 def subtract(a, b):
-  pass
+  res = 0
+  if a>b:
+    while a > b:
+      a -= 1
+      res+=1
+  elif a<b:
+    while a < b:
+      a+=1
+      res-=1
+  return res
+
 def multiply(a, b):
   pass
+
 def divide(a, b):
   pass
