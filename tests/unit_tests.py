@@ -26,6 +26,18 @@ class PyCalcUnitTests(unittest.TestCase):
         got = calculator.subtract(l, r)
         self.assertEqual(got, e)
   
+  def test_multiply(self):
+    left = [10,10,10,-10,-10,-10,0,0,0]
+    right = [5,-5,0,5,-5,0,40,-50,0]
+    expected = [50,-50,0,-50,50,0,0,0,0]
+    for i in range(len(left)):
+      l = left[i]
+      r = right[i]
+      e = expected[i]
+      with self.subTest(l=l, r=r, e=e):
+        got = calculator.multiply(l, r)
+        self.assertEqual(got, e)
+  
 
 
 if __name__ == '__main__':
