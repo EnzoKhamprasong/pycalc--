@@ -38,6 +38,17 @@ class PyCalcUnitTests(unittest.TestCase):
         got = calculator.multiply(l, r)
         self.assertEqual(got, e)
   
+  def test_divide(self):
+    left = [10,10,-10,-10,0]
+    right = [2,-2,10,-10,60]
+    expected = [5,-5,1,-1,0]
+    for i in range(len(left)):
+      l = left[i]
+      r = right[i]
+      e = expected[i]
+      with self.subTest(l=l, r=r, e=e):
+        got = calculator.divide(l, r)
+        self.assertEqual(got, e)
 
 
 if __name__ == '__main__':
